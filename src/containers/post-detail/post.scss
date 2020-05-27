@@ -1,0 +1,19 @@
+.post-wrapp {
+  max-width: 960px;
+  margin: 0 auto;
+  .post-info {
+    padding: 0 0 15px;
+    border-bottom: 1px solid #cecece;
+  }
+  ul {
+    margin-top: 80px;
+    li {
+      margin-top: 45px;
+      padding: 0 0 15px;
+      border-bottom: 1px solid #cecece;
+      .title {
+        font-weight: bold;
+      }
+    }
+  }
+}

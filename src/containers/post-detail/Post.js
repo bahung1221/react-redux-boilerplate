@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { fetchPost } from '../../store/actions'
+import { fetchPost } from '../../store/post-detail/actions'
 
 import './post.scss'
 
@@ -17,7 +17,6 @@ class Post extends Component {
   render() {
     const { comments, post, isFetching } = this.props
 
-    console.log(post)
     return (
       <div className="post-wrapp">
         {isFetching && comments.length === 0 && <h2>Loading...</h2>}
@@ -49,8 +48,8 @@ Post.propTypes = {
 }
 
 function mapStateToProps(state) {
-  const { postById } = state
-  const { isFetching, comments, post } = postById
+  const { post: postState } = state
+  const { isFetching, comments, post } = postState
 
   return {
     isFetching,
